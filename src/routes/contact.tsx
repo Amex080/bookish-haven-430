@@ -4,9 +4,9 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — POLYNEK Online Bookshop" },
-      { name: "description", content: "Contact the POLYNEK Bookshop team at Federal Polytechnic Nekede, Owerri." },
-      { property: "og:title", content: "Contact POLYNEK Bookshop" },
+      { title: "Contact — EKSU Online Bookshop" },
+      { name: "description", content: "Contact the EKSU Bookshop team at Ekiti State University, Ado-Ekiti." },
+      { property: "og:title", content: "Contact EKSU Bookshop" },
       { property: "og:description", content: "Get in touch with our bookshop team." },
     ],
   }),
@@ -25,7 +25,7 @@ function ContactPage() {
       <div className="mt-14 grid gap-10 md:grid-cols-2">
         <div className="space-y-6">
           {[
-            { icon: MapPin, title: "Address", body: "Federal Polytechnic Nekede\nP.M.B. 1036, Owerri, Imo State" },
+            { icon: MapPin, title: "Address", body: "Ekiti State University\nP.M.B. 5363, Ado-Ekiti, Ekiti State" },
             { icon: Phone, title: "Phone", body: "+234 803 000 0000" },
             { icon: Mail, title: "Email", body: "orders@polynek-bookshop.ng" },
           ].map(({ icon: Icon, title, body }) => (

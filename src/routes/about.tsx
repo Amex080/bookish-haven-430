@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — POLYNEK Online Bookshop" },
-      { name: "description", content: "About the POLYNEK Online Bookshop project — Federal Polytechnic Nekede, Owerri." },
-      { property: "og:title", content: "About POLYNEK Bookshop" },
+      { title: "About — EKSU Online Bookshop" },
+      { name: "description", content: "About the EKSU Online Bookshop project — Ekiti State University, Ado-Ekiti." },
+      { property: "og:title", content: "About EKSU Bookshop" },
       { property: "og:description", content: "Modernising the campus bookshop through e-commerce." },
     ],
   }),
@@ -19,8 +19,8 @@ function AboutPage() {
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">The campus bookshop, brought online.</h1>
       <div className="mt-10 space-y-6 text-base leading-relaxed text-foreground/85">
         <p>
-          POLYNEK Bookshop is the online arm of the Federal Polytechnic Nekede, Owerri campus bookshop —
-          operated by POLYNEK Consultancy Limited. It replaces long queues, out-of-stock counters and paper
+          EKSU Bookshop is the online arm of the Ekiti State University, Ado-Ekiti campus bookshop —
+          operated by Ekiti State University. It replaces long queues, out-of-stock counters and paper
           receipts with a searchable catalogue and secure checkout available on any device.
         </p>
         <p>

@@ -12,7 +12,7 @@ export function SiteHeader() {
             <BookOpen className="h-4 w-4" />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-serif text-lg font-semibold text-foreground">POLYNEK</span>
+            <span className="font-serif text-lg font-semibold text-foreground">EKSU</span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Bookshop</span>
           </span>
         </Link>

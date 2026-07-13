@@ -6,7 +6,7 @@ import { formatNaira } from "@/lib/books";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "Your Cart — POLYNEK Bookshop" },
+      { title: "Your Cart — EKSU Bookshop" },
       { name: "description", content: "Review the books in your cart before checkout." },
       { name: "robots", content: "noindex" },
     ],

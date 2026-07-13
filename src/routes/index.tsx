@@ -25,13 +25,13 @@ function HomePage() {
         <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-2 md:py-32">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-primary-foreground/80">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold" /> POLYNEK Consultancy Ltd.
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Ekiti State University
             </div>
             <h1 className="font-serif text-4xl leading-tight md:text-6xl">
               Every course, <span className="italic text-gold">every chapter</span> — delivered.
             </h1>
             <p className="mt-6 max-w-lg text-base text-primary-foreground/75">
-              The official online bookshop of Federal Polytechnic Nekede, Owerri. Browse recommended textbooks
+              The official online bookshop of Ekiti State University, Ado-Ekiti. Browse recommended textbooks
               across nine faculties and order without queueing at the counter.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
