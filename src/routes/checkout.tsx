@@ -16,7 +16,17 @@ export const Route = createFileRoute("/checkout")({
 });
 
 // Fields per §3.9 Input/Output Specifications of the project report.
-const FIELDS = [
+type Field = {
+  name: string;
+  label: string;
+  type: "text" | "email" | "tel" | "select" | "textarea";
+  required?: boolean;
+  options?: string[];
+  default?: string;
+  full?: boolean;
+};
+
+const FIELDS: Field[] = [
   { name: "surname", label: "Surname", type: "text", required: true },
   { name: "firstName", label: "First name", type: "text", required: true },
   { name: "email", label: "E-mail address", type: "email", required: true },
@@ -26,7 +36,7 @@ const FIELDS = [
   { name: "zip", label: "Zip / Postal code", type: "text", required: true },
   { name: "office", label: "Office address", type: "text" },
   { name: "delivery", label: "Delivery address", type: "textarea", required: true, full: true },
-] as const;
+];
 
 function CheckoutPage() {
   const { items, total, clear } = useCart();
