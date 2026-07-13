@@ -10,9 +10,9 @@ export const Route = createFileRoute("/books")({
   }),
   head: () => ({
     meta: [
-      { title: "Catalogue — POLYNEK Online Bookshop" },
-      { name: "description", content: "Browse academic textbooks across nine disciplines at POLYNEK Bookshop." },
-      { property: "og:title", content: "POLYNEK Bookshop Catalogue" },
+      { title: "Catalogue — EKSU Online Bookshop" },
+      { name: "description", content: "Browse academic textbooks across nine disciplines at EKSU Bookshop." },
+      { property: "og:title", content: "EKSU Bookshop Catalogue" },
       { property: "og:description", content: "Academic titles across accounting, economics, e-commerce, sociology and more." },
     ],
   }),

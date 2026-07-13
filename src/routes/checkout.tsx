@@ -7,8 +7,8 @@ import { formatNaira } from "@/lib/books";
 export const Route = createFileRoute("/checkout")({
   head: () => ({
     meta: [
-      { title: "Checkout — POLYNEK Bookshop" },
-      { name: "description", content: "Complete your order at POLYNEK Online Bookshop." },
+      { title: "Checkout — EKSU Bookshop" },
+      { name: "description", content: "Complete your order at EKSU Online Bookshop." },
       { name: "robots", content: "noindex" },
     ],
   }),
