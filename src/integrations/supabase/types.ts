@@ -14,7 +14,206 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      books: {
+        Row: {
+          author: string
+          category_id: number
+          cover: string
+          created_at: string
+          description: string
+          id: string
+          price: number
+          title: string
+        }
+        Insert: {
+          author: string
+          category_id: number
+          cover?: string
+          created_at?: string
+          description?: string
+          id?: string
+          price: number
+          title: string
+        }
+        Update: {
+          author?: string
+          category_id?: number
+          cover?: string
+          created_at?: string
+          description?: string
+          id?: string
+          price?: number
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "books_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      categories: {
+        Row: {
+          id: number
+          name: string
+          slug: string
+        }
+        Insert: {
+          id?: number
+          name: string
+          slug: string
+        }
+        Update: {
+          id?: number
+          name?: string
+          slug?: string
+        }
+        Relationships: []
+      }
+      contact_messages: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          subject: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          subject?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          subject?: string
+        }
+        Relationships: []
+      }
+      order_items: {
+        Row: {
+          book_id: string | null
+          id: string
+          order_id: string
+          quantity: number
+          title: string
+          unit_price: number
+        }
+        Insert: {
+          book_id?: string | null
+          id?: string
+          order_id: string
+          quantity?: number
+          title: string
+          unit_price: number
+        }
+        Update: {
+          book_id?: string | null
+          id?: string
+          order_id?: string
+          quantity?: number
+          title?: string
+          unit_price?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_book_id_fkey"
+            columns: ["book_id"]
+            isOneToOne: false
+            referencedRelation: "books"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          address: string
+          country: string
+          created_at: string
+          email: string
+          first_name: string
+          gender: string
+          id: string
+          office: string
+          phone: string
+          status: string
+          surname: string
+          total: number
+          user_id: string | null
+          zip: string
+        }
+        Insert: {
+          address: string
+          country?: string
+          created_at?: string
+          email: string
+          first_name: string
+          gender?: string
+          id?: string
+          office?: string
+          phone: string
+          status?: string
+          surname: string
+          total: number
+          user_id?: string | null
+          zip?: string
+        }
+        Update: {
+          address?: string
+          country?: string
+          created_at?: string
+          email?: string
+          first_name?: string
+          gender?: string
+          id?: string
+          office?: string
+          phone?: string
+          status?: string
+          surname?: string
+          total?: number
+          user_id?: string | null
+          zip?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
