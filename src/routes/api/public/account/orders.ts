@@ -24,7 +24,7 @@ export const Route = createFileRoute("/api/public/account/orders")({
 
         const { data, error } = await supabaseAdmin
           .from("orders")
-          .select("id, created_at, total, status, order_items(title, unit_price, quantity)")
+          .select("id, created_at, total, status, order_items(title, unit_price, quantity, access_code)")
           .eq("user_id", user.id)
           .order("created_at", { ascending: false });
 
@@ -43,6 +43,7 @@ export const Route = createFileRoute("/api/public/account/orders")({
           status: order["status"],
           items: (order["order_items"] as Array<Record<string, unknown>>).map((item) => ({
             title: item["title"],
+            access_code: item["access_code"],
             unit_price: Number(item["unit_price"]),
             quantity: Number(item["quantity"]),
           })),

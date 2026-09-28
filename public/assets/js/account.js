@@ -34,7 +34,7 @@ async function loadOrders() {
             ${order.items
               .map(
                 (item) =>
-                  `<li><span>${item.title} &times; ${item.quantity}</span><span>${formatNaira(
+                  `<li><span>${item.title} &times; ${item.quantity}<br><small>Access code: <strong>${item.access_code ?? ""}</strong></small></span><span>${formatNaira(
                     item.unit_price * item.quantity,
                   )}</span></li>`,
               )
