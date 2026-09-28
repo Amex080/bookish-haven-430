@@ -102,6 +102,7 @@ export type Database = {
       }
       order_items: {
         Row: {
+          access_code: string
           book_id: string | null
           id: string
           order_id: string
@@ -110,6 +111,7 @@ export type Database = {
           unit_price: number
         }
         Insert: {
+          access_code?: string
           book_id?: string | null
           id?: string
           order_id: string
@@ -118,6 +120,7 @@ export type Database = {
           unit_price: number
         }
         Update: {
+          access_code?: string
           book_id?: string | null
           id?: string
           order_id?: string

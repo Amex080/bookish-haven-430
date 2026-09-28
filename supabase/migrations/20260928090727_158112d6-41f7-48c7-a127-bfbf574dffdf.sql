@@ -1,0 +1,2 @@
+ALTER TABLE public.order_items ADD COLUMN access_code text NOT NULL DEFAULT ('EKSU-' || upper(substr(md5(random()::text || clock_timestamp()::text), 1, 4)) || '-' || upper(substr(md5(random()::text), 1, 4)));
+CREATE UNIQUE INDEX order_items_access_code_key ON public.order_items(access_code);
