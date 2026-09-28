@@ -23,7 +23,7 @@ export const Route = createFileRoute("/api/public/orders")({
         if (!customer) return bad("Missing delivery details.");
         if (!items.length) return bad("Your cart is empty.");
 
-        const required = ["surname", "firstName", "email", "phone", "address"] as const;
+        const required = ["surname", "firstName", "email", "phone"] as const;
         for (const field of required) {
           if (!customer[field]?.trim()) return bad(`Please provide your ${field}.`);
         }
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/api/public/orders")({
             country: customer["country"] || "Nigeria",
             zip: customer["zip"] ?? "",
             office: customer["office"] ?? "",
-            address: customer["address"]!.trim(),
+            address: (customer["address"] ?? "").trim(),
             total,
           })
           .select("id")

@@ -76,10 +76,6 @@ export const Route = createFileRoute("/checkout")({
             <input id="office" name="office">
           </div>
         </div>
-        <div class="field">
-          <label for="address">Delivery address</label>
-          <textarea id="address" name="address" required autocomplete="street-address"></textarea>
-        </div>
         <button class="btn btn-primary btn-block" type="submit">Place order</button>
         <p class="form-note" style="margin-top:.8rem">Payment is completed on delivery or at the bookshop counter.</p>
       </form>
